@@ -1,3 +1,3 @@
 # listElements
 
-password input
+password input, searching from the password list
