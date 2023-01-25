@@ -16,7 +16,7 @@ input.addEventListener('input', (e) => {
   // console.log(text);
 
   passwords.forEach((password, index) => {
-    if (password === text) {
+    if (password.toLowerCase() === text.toLowerCase()) {
       console.log('password: ', password, 'index: ', index);
       div.textContent = messages[index];
       e.target.value = '';
