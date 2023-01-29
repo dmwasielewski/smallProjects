@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  display: block;
+  margin: 50px auto;
+  background-color: aquamarine;
+  border: 5px solid cadetblue;
+  padding: 20px 50px;
+  font-size: 22px;
+}
+
+div {
+  margin: 10px;
+  font-size: 26px;
+  text-align: center;
+}
