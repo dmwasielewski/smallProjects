@@ -24,6 +24,7 @@ button {
 }
 
 div {
+  /* display: block; */
   margin: 10px;
   font-size: 26px;
   text-align: center;
