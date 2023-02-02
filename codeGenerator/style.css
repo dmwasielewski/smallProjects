@@ -1,3 +1,4 @@
+/* My Custom CSS Reset */
 *,
 *::before,
 *::after {
@@ -9,10 +10,42 @@
   scroll-behavior: smooth;
 }
 
-html {
+html,
+body {
+  height: 100%;
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* My Custom CSS Reset END*/
 
 button {
   display: block;
