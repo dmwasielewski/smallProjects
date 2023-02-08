@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* My Custom CSS Reset */
 *,
 *::before,
@@ -46,3 +48,89 @@ h6 {
 }
 
 /* My Custom CSS Reset END*/
+
+body {
+    background: hsl(0, 0%, 90%);
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 60px 0;
+}
+
+h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.panel {
+    margin: 30px;
+}
+
+.panel-left,
+.panel-right {
+    display: inline-block;
+    width: 48%;
+    overflow: hidden;
+    margin: 40px auto 0;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* 
+.panel-left p {
+    font-size: 1.5rem;
+} */
+
+.panel h3 {
+    text-align: center;
+}
+
+h1,
+h3 {
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.select {
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.select img {
+    width: 200px;
+    margin: 20px;
+    display: inline-block;
+    border-radius: 40%;
+}
+
+button {
+    display: block;
+    padding: 20px 50px;
+    border: 2px solid black;
+    border-radius: 5%;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color: hsl(0, 89%, 95%);
+    font-weight: bold;
+    margin: 30px auto;
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 89%, 70%);
+    color: white;
+}
+
+span {
+    font-weight: bold;
+}
