@@ -20,7 +20,7 @@ const addAdvice = (event) => {
 };
 
 const resetAdvice = (event) => {
-  event.preventDefault();
+  // event.preventDefault(); used outside form, so I don't need use preventDefault or use in html button type="button"
   optionsArray.length = 0;
   // console.log(optionsArray);
   // alert('reset advice ok');
@@ -29,7 +29,7 @@ const resetAdvice = (event) => {
 };
 
 const showOptions = (event) => {
-  event.preventDefault();
+  // event.preventDefault();
   alert('Your options are: \n' + optionsArray.join(',\n'));
   input.value = '';
 };
