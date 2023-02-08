@@ -1,25 +1,43 @@
-// 'use strict';
+'use strict';
 
-const adviceArray = [];
-const h1 = document.querySelector('h1');
+const optionsArray = ['test1', 'test2', 'test3'];
+const input = document.querySelector('input');
 
-const addAdvice = (e) => {
-  e.preventDefault();
+const showAdvice = (event) => {
+  event.preventDefault();
+  const index = Math.floor(Math.random() * optionsArray.length);
+  console.log(index);
+  document.querySelector('h3').textContent = optionsArray[index];
+  input.value = '';
+};
 
-  const input = document.querySelector('input');
-  const newAdvice = input.value;
-  if (input.value.length) {
-    for (element of adviceArray) {
-      if (element === newAdvice) {
-        alert('already exists');
-        return;
-      }
-    }
-    adviceArray.push(newAdvice);
+const addAdvice = (event) => {
+  event.preventDefault();
+  optionsArray.push(input.value);
+  alert('Done. You added: ' + input.value);
+  // console.log(optionsArray);
+  input.value = '';
+};
 
-    h1.textContent += newAdvice + ', ';
-    input.value = '';
-  }
+const resetAdvice = (event) => {
+  event.preventDefault();
+  optionsArray.length = 0;
+  // console.log(optionsArray);
+  // alert('reset advice ok');
+  document.querySelector('h3').textContent = '';
+  input.value = '';
+};
+
+const showOptions = (event) => {
+  event.preventDefault();
+  alert('Your options are: \n' + optionsArray.join(',\n'));
+  input.value = '';
 };
 
 document.querySelector('.addAdvice').addEventListener('click', addAdvice);
+
+document.querySelector('.resetAdvice').addEventListener('click', resetAdvice);
+
+document.querySelector('.showAdvice').addEventListener('click', showAdvice);
+
+document.querySelector('.showOptions').addEventListener('click', showOptions);
