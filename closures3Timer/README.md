@@ -1,3 +1,3 @@
-# closuresAgeExample
+# closuresTimer
 
-Age
+Timer
