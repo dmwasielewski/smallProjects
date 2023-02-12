@@ -1,4 +1,6 @@
-// 'use strict';
+'use strict';
+
+//closure gives you access to an outer function’s scope from an inner function
 
 const add = (start = 0) => {
   let number = start;
