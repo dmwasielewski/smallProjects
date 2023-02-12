@@ -1,0 +1,3 @@
+# closuresTimer
+
+Timer, clicker
