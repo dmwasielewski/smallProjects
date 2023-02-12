@@ -50,13 +50,8 @@ h6 {
 /* My Custom CSS Reset END*/
 
 body {
+    margin-top: 50px;
+    font-size: 4rem;
+    text-align: center;
     background: hsl(0, 0%, 90%);
-}
-
-div {
-    max-width: 30%;
-    margin: 100px auto;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    font-weight: bold;
 }
