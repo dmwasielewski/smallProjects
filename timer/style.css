@@ -56,10 +56,12 @@ body {
     background: hsl(0, 0%, 90%);
 }
 
-div {
-    line-height: 100vh;
+.timer {
+    margin: 50px;
 }
 
-span {
+p {
+    margin-top: 90px;
     font-weight: bold;
+
 }
