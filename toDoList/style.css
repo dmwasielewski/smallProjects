@@ -77,28 +77,25 @@ header h1 {
 }
 
 /* Form & Input */
-.item-form-box {
+.item-form {
     display: flex;
     justify-content: space-between;
-
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-.form-input {
+.item-form-input {
     width: 340px;
     margin-bottom: 20px;
     padding: 10px;
-
     border: 2px solid hsl(7, 85%, 81%);
     border-radius: 5px;
 
 }
 
-.btn,
+.btn-add,
 .btn-clear {
     width: 130px;
     padding: 10px;
-
     color: hsl(0, 0%, 100%);
     background-color: hsl(6, 87%, 75%);
     border: 2px solid hsl(6, 87%, 75%);
@@ -106,32 +103,22 @@ header h1 {
     cursor: pointer;
 }
 
-.btn-link {
-    padding: 0;
-    font-size: 2rem;
-    /* color: hsl(0, 0%, 30%); */
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover,
+.btn-add:hover,
 .btn-clear:hover {
     background-color: hsl(6, 100%, 68%);
     border: 2px solid hsl(6, 100%, 68%);
 }
 
-.filter {
+.item-filter {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
-.form-input-filter {
+.item-form-filter {
     width: 340px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding: 10px;
-
     background: transparent;
     border: 2px solid hsl(7, 85%, 81%);
     border-radius: 5px;
@@ -139,7 +126,7 @@ header h1 {
 
 /* Items */
 
-.items {
+.item-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -149,7 +136,7 @@ header h1 {
 
 }
 
-.items li {
+.item-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -163,16 +150,23 @@ header h1 {
     cursor: pointer;
 }
 
-.text-red {
-    color: hsl(0, 100%, 60%);
+.btn-item-del {
+    padding: 0;
+    font-size: 2rem;
+    /* color: hsl(0, 0%, 30%); */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: hsl(0, 99%, 68%);
 }
+
 
 /* Media queries */
 @media (max-width: 500px) {
 
     header,
-    .item-form-box,
-    .filter {
+    .item-form,
+    .item-filter {
         flex-direction: column;
         align-items: center;
     }
