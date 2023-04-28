@@ -5,13 +5,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" defer></script>
+    <script src="./script.js" defer></script>
+    <title>Shopping List</title>
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <img width="150px" height="150px" src="./images/ShoppingList.svg" alt="Shopping List">
+            <h1>Shopping List</h1>
+        </header>
+        <form id="item-form" class="item-form-box">
+            <div class="form-control">
+                <input type="text" class="form-input" id="item-input" name="item" placeholder="Enter Item">
+            </div>
+            <div class="form-control">
+                <button type="submit" class="btn">
+                    <i class="fa-solid fa-plus"></i> Add Item
+                </button>
+            </div>
+        </form>
 
+        <div class="filter">
+            <div class="form-control">
+                <input type="text" class="form-input-filter" id="filter" placeholder="Filter Items" />
+            </div>
+            <div class="form-control">
+                <button id="clear" class="btn-clear">
+                    <i class="fa-solid fa-trash"></i> Clear All</button>
+            </div>
+        </div>
+
+
+        <ul id="item-list" class="items">
+            <li>
+                Apples
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Orange Juice
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Sugar
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Milk
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Sugar
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Sugar
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Orange Juice
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Sugar
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Milk
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Milk
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Orange Juice
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Sugar
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+            <li>
+                Sugar
+                <button class="remove-item btn-link text-red">
+                    <i class="fa-solid fa-square-xmark"></i></i>
+                </button>
+            </li>
+        </ul>
+
+
+
+    </div>
 </body>
 
 </html>

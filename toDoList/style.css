@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
 /* My Custom CSS Reset */
 *,
 *::before,
@@ -12,10 +14,10 @@
 
 html,
 body {
-    height: 100%;
+    font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
-    font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    height: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -48,5 +50,134 @@ h6 {
 /* My Custom CSS Reset END*/
 
 body {
-    background: hsl(0, 0%, 90%);
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 30%);
+    background: hsl(3, 100%, 96%);
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+/* Form & Input */
+.item-form-box {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 340px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    border: 2px solid hsl(7, 85%, 81%);
+    border-radius: 5px;
+
+}
+
+.btn,
+.btn-clear {
+    width: 130px;
+    padding: 10px;
+
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(6, 87%, 75%);
+    border: 2px solid hsl(6, 87%, 75%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-link {
+    padding: 0;
+    font-size: 2rem;
+    /* color: hsl(0, 0%, 30%); */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn-clear:hover {
+    background-color: hsl(6, 100%, 68%);
+    border: 2px solid hsl(6, 100%, 68%);
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-input-filter {
+    width: 340px;
+    margin-bottom: 60px;
+    padding: 10px;
+
+    background: transparent;
+    border: 2px solid hsl(7, 85%, 81%);
+    border-radius: 5px;
+}
+
+/* Items */
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid hsl(7, 85%, 81%);
+    border-radius: 5px;
+
+}
+
+.items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 47%;
+    color: hsl(0, 0%, 30%);
+    border: 2px solid hsl(7, 85%, 81%);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.text-red {
+    color: hsl(0, 100%, 60%);
+}
+
+/* Media queries */
+@media (max-width: 500px) {
+
+    header,
+    .item-form-box,
+    .filter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .items li {
+        width: 100%;
+    }
 }
