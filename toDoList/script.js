@@ -8,13 +8,18 @@ function addItem(e) {
   e.preventDefault();
 
   const newItem = itemInput.value;
-  //Validate input
+
+  // Validate input
   if (newItem === '') {
     alert('Please add an item');
     return;
   }
-  console.log('success'); //?
-  console.log('ss'); //?
+
+  // Create list item
+  const li = document.createElement('li');
+  li.appendChild(document.createTextNode(newItem));
+
+  const button = createButton('submit', addItem);
 }
 
 // Event listeners
