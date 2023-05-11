@@ -54,7 +54,9 @@ function removeItem(event) {
 }
 
 function clearItems() {
-  itemList.innerHTML = '';
+  if (confirm('Are you sure?')) {
+    itemList.innerHTML = '';
+  }
 }
 
 // Event listeners
