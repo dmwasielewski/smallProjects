@@ -4,6 +4,7 @@ const itemForm = document.querySelector('#item-form');
 const itemInput = document.querySelector('#item-form-input');
 const itemList = document.querySelector('#item-list');
 const itemsClear = document.querySelector('#btn-clear');
+const itemFilter = document.querySelector('.item-filter');
 // const buttonSub = document.querySelector('.btn-add');
 
 function addItem(event) {
@@ -30,6 +31,7 @@ function addItem(event) {
   li.append(button);
   itemList.append(li);
   itemInput.value = '';
+  filterState();
 }
 
 function createButton(classes) {
@@ -56,6 +58,16 @@ function removeItem(event) {
 function clearItems() {
   if (confirm('Are you sure?')) {
     itemList.innerHTML = '';
+    filterState();
+  }
+}
+
+// Disable or enable filter state;
+function filterState() {
+  if (itemList.innerHTML === '') {
+    itemFilter.style.display = 'none';
+  } else {
+    itemFilter.style.display = 'flex';
   }
 }
 
