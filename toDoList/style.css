@@ -157,9 +157,12 @@ header h1 {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: hsl(0, 99%, 68%);
+    color: hsl(7, 85%, 81%);
 }
 
+.btn-item-del:hover {
+    color: hsl(6, 100%, 68%);
+}
 
 /* Media queries */
 @media (max-width: 500px) {

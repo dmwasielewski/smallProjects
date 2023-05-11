@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "jsdom": "^21.1.1"
-  }
+  },
+  "name": "todolist",
+  "description": "To do list:",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
