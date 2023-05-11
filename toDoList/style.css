@@ -76,7 +76,13 @@ header h1 {
     font-weight: 500;
 }
 
-/* Form & Input */
+/* Form & Filter */
+
+.item-form,
+.item-filter {
+    min-width: 500px;
+}
+
 .item-form {
     display: flex;
     justify-content: space-between;
