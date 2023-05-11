@@ -3,6 +3,7 @@
 const itemForm = document.querySelector('#item-form');
 const itemInput = document.querySelector('#item-form-input');
 const itemList = document.querySelector('#item-list');
+const itemsClear = document.querySelector('#btn-clear');
 // const buttonSub = document.querySelector('.btn-add');
 
 function addItem(event) {
@@ -45,6 +46,19 @@ function createIcon(classes) {
   return icon;
 }
 
+function removeItem(event) {
+  if (event.target.parentElement.classList.contains('remove-item')) {
+    // event.target.parentElement.parentElement.remove();
+    event.target.closest('li').remove();
+  }
+}
+
+function clearItems() {
+  itemList.innerHTML = '';
+}
+
 // Event listeners
 itemForm.addEventListener('submit', addItem);
+itemList.addEventListener('click', removeItem);
+itemsClear.addEventListener('click', clearItems);
 // buttonSub.addEventListener('click', addItem);
