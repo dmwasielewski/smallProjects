@@ -134,10 +134,12 @@ function filterItems(event) {
 // const re = /[]/g;
 // console.log(typeof itemList);
 
-// Event listeners
-itemForm.addEventListener('submit', addItemSubmit);
-itemList.addEventListener('click', removeItem);
-itemsClear.addEventListener('click', clearItems);
-itemFilter.addEventListener('input', filterItems);
-document.addEventListener('DOMContentLoaded', displayItems);
-// buttonSub.addEventListener('click', addItemSubmit);
+// Event listeners with IIFE
+(() => {
+  itemForm.addEventListener('submit', addItemSubmit);
+  itemList.addEventListener('click', removeItem);
+  itemsClear.addEventListener('click', clearItems);
+  itemFilter.addEventListener('input', filterItems);
+  document.addEventListener('DOMContentLoaded', displayItems);
+  // buttonSub.addEventListener('click', addItemSubmit);
+})();
