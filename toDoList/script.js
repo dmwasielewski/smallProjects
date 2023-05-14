@@ -17,6 +17,8 @@ function addItemSubmit(event) {
 
   const newInputItem = itemInput.value;
 
+  // const pattern = /^[a-zA-Z]+$/;
+  // const isLetterOnly = pattern.test(newInputItem);
   // Validate user input and handle the error
   try {
     if (newInputItem === '') {
@@ -25,14 +27,24 @@ function addItemSubmit(event) {
   } catch (error) {
     console.error('User error:', error.message);
     alert('Please write an item');
-    return; //Preventing creation an empty li element
+    return newInputItem; //Preventing creation an empty li element
   }
+
+  //Check duplicates
+  const itemsFromStorage = getItemsFromStorage();
+  if (itemsFromStorage.includes(newInputItem)) {
+    alert('This item already exists!');
+
+    // removeItem(item);
+  } else {
+    addItemToDom(newInputItem);
+    //Add item to localStorage
+    addItemToStorage(newInputItem);
+    itemInput.value = '';
+    filterState();
+  }
+
   //Create item DOM element
-  addItemToDom(newInputItem);
-  //Add item to localStorage
-  addItemToStorage(newInputItem);
-  itemInput.value = '';
-  filterState();
 }
 
 // Add item to the DOM
@@ -151,6 +163,7 @@ function filterItems(event) {
   // console.log(filterText);
   // console.log(items);
 }
+
 // const re = /[]/g;
 // console.log(typeof itemList);
 
