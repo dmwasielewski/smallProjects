@@ -95,23 +95,24 @@ function removeItem(event) {
 
 function removeItemFromStorage(item) {
   let itemsFromStorage = getItemsFromStorage();
-  console.log(itemsFromStorage);
+  // console.log(itemsFromStorage);
   // Filter out item to be removed and save only !== ones
   itemsFromStorage = itemsFromStorage.filter((i) => i !== item);
 
   //Re-set to localStorage
-  console.log(
-    'items from storage: ',
-    itemsFromStorage,
-    'last deleted !== item: ',
-    item
-  );
+  // console.log(
+  //   'items from storage: ',
+  //   itemsFromStorage,
+  //   'last deleted !== item: ',
+  //   item
+  // );
   localStorage.setItem('items', JSON.stringify(itemsFromStorage));
 }
 
 function clearItems() {
   if (confirm('Are you sure?')) {
     itemList.innerText = '';
+    localStorage.clear('items');
     filterState();
   }
 }
