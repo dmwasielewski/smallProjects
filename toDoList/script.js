@@ -85,9 +85,28 @@ function createIcon(classes) {
 
 function removeItem(event) {
   if (event.target.parentElement.classList.contains('remove-item')) {
+    //Remove item from DOM
     // event.target.parentElement.parentElement.remove();
     event.target.closest('li').remove();
+    removeItemFromStorage(event.target.closest('li').textContent);
+    // removeItemFromStorage(event.target.closest('li'));
   }
+}
+
+function removeItemFromStorage(item) {
+  let itemsFromStorage = getItemsFromStorage();
+  console.log(itemsFromStorage);
+  // Filter out item to be removed and save only !== ones
+  itemsFromStorage = itemsFromStorage.filter((i) => i !== item);
+
+  //Re-set to localStorage
+  console.log(
+    'items from storage: ',
+    itemsFromStorage,
+    'last deleted !== item: ',
+    item
+  );
+  localStorage.setItem('items', JSON.stringify(itemsFromStorage));
 }
 
 function clearItems() {
@@ -134,7 +153,7 @@ function filterItems(event) {
 // const re = /[]/g;
 // console.log(typeof itemList);
 
-// Event listeners with IIFE
+// Initialize (app) event listeners with IIFE
 (() => {
   itemForm.addEventListener('submit', addItemSubmit);
   itemList.addEventListener('click', removeItem);
