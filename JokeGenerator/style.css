@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* My Custom CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* My Custom CSS Reset END*/
+
+body {
+    background-color: hsl(238, 61%, 64%);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: hsla(216, 100%, 99%, 0.963);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px hsl(238, 61%, 48%);
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 100%;
+    width: 800px;
+}
+
+h1 {
+    margin: 0;
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.joke {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.joke-btn {
+    background-color: hsl(257, 100%, 62%);
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px hsla(252, 100%, 50%, 0.121), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.joke-btn:active {
+    transform: scale(0.98);
+}
+
+.joke-btn:focus {
+    outline: 0;
+}
