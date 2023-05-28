@@ -1,19 +1,21 @@
 'use strict';
 
 function fetchUser() {
+  showSpinner();
   fetch('https://randomuser.me/api/')
     .then((response) => response.json())
     .then((data) => {
       // console.log(data);
       // console.log(data.results[0]);
 
+      hideSpinner();
       displayUser(data.results[0]);
     });
 }
 
 function displayUser(userData) {
-  console.log(userData);
-  console.log(userData.name.first);
+  // console.log(userData);
+  // console.log(userData.name.first);
 
   const userDisplay = document.querySelector('#user');
 
@@ -43,6 +45,14 @@ function displayUser(userData) {
                     </div>
                 </div>
             </div>`;
+}
+
+function showSpinner() {
+  document.querySelector('.spinner').style.display = 'block';
+}
+
+function hideSpinner() {
+  document.querySelector('.spinner').style.display = 'none';
 }
 
 document.querySelector('#generate').addEventListener('click', fetchUser);
