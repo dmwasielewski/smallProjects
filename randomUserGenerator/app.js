@@ -37,7 +37,7 @@ function displayUser(userData) {
                             <span class="font-bold">Phone: </span> ${userData.phone}
                         </p>
                         <p class="text-xl">
-                            <span class="font-bold">Location: </span> ${userData.location.city}
+                            <span class="font-bold">Location: </span> ${userData.location.city}, ${userData.location.country}
                         </p>
                         <p class="text-xl"><span class="font-bold">Age: </span> ${userData.dob.age}</p>
                     </div>
