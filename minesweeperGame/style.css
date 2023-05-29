@@ -76,7 +76,7 @@ table td {
 
 table td div {
     cursor: pointer;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .bomb {
@@ -88,4 +88,8 @@ table td div {
 
 .show {
     opacity: 1;
+}
+
+.btn {
+    display: none;
 }

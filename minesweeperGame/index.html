@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saper game</title>
+    <title>Minesweeper game</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js" defer></script>
 </head>
 
 <body>
     <div class="container">
-        <h2>Saper</h2>
+        <h2>Minesweeper</h2>
 
         <table>
             <tbody id="elements">
@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                     <td data-is-bomb="1">
-                        <div class="bomb">12</div>
+                        <div class="bomb">x</div>
                     </td>
                     <td data-points="5">
                         <div>5</div>
@@ -90,6 +90,7 @@
         <p>Points: <span id="points">0</span></p>
 
         <p id="message"></p>
+        <button id="btn" class="btn">New game</button>
     </div>
 </body>
 
