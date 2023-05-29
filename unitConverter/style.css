@@ -49,9 +49,36 @@ h6 {
 
 /* My Custom CSS Reset END*/
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfcfc;
+    font-size: 2rem;
+}
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100vh;
+    gap: 10px;
+}
+
+input {
+    max-width: 100px;
+    padding: 4px;
+    border: 1px solid #1d73d4;
+    background-color: #cff2ff;
+}
+
+button {
+    border: 1px solid #3b86db;
+    padding: 4px 8px;
+    background-color: #51abef;
+    color: #fff;
+    cursor: pointer;
+}
+
+.marked {
+    background-color: #1768a2;
 }
