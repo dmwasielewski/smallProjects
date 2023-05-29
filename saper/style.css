@@ -57,9 +57,9 @@ h6 {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #fcfcfc;
-    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(0, 76%, 95%);
+    font-size: 3rem;
 
 }
 
@@ -68,10 +68,10 @@ table {
 }
 
 table td {
-    width: 20px;
-    height: 20px;
+    width: 5rem;
+    height: 5rem;
     text-align: center;
-    border: 1px solid grey;
+    border: 2px solid hsl(0, 0%, 53%);
 }
 
 table td div {
@@ -80,9 +80,10 @@ table td div {
 }
 
 .bomb {
-    background-color: #f44343;
+    background-color: hsl(0, 89%, 61%);
     color: #fff;
-    border-color: red;
+    border-color: hsl(0, 100%, 50%);
+
 }
 
 .show {
