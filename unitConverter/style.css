@@ -51,7 +51,7 @@ h6 {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fcfcfc;
+    background-color: hsla(190, 100%, 94%, 0.894);
     font-size: 2rem;
 }
 
@@ -67,18 +67,18 @@ body {
 input {
     max-width: 100px;
     padding: 4px;
-    border: 1px solid #1d73d4;
-    background-color: #cff2ff;
+    border: 1px solid hsl(212, 76%, 47%);
+    background-color: hsl(196, 100%, 91%);
 }
 
 button {
-    border: 1px solid #3b86db;
+    border: 1px solid hsl(212, 69%, 55%);
     padding: 4px 8px;
-    background-color: #51abef;
-    color: #fff;
+    background-color: hsl(206, 83%, 63%);
+    color: hsl(0, 0%, 100%);
     cursor: pointer;
 }
 
 .marked {
-    background-color: #1768a2;
+    background-color: hsl(205, 75%, 36%);
 }
