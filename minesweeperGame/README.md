@@ -4,8 +4,8 @@ Minesweeper Game
 
 If:
 
-a) The field has points - added to the points pool (data-points).
+1. The field has points - added to the points pool (data-points).
 
-b) The field is a bomb - showing the message "Game Over."
+2. The field is a bomb - showing the message "Game Over."
 
-When achieving 150 points, displayed the message "You Won!"
+3. When achieving 150 points, displayed the message "You Won!"
