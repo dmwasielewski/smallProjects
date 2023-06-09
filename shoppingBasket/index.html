@@ -6,10 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Basket</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./src/basket.js" defer></script>
+    <script src="./src/ui.js" defer></script>
+
 </head>
 
 <body>
-
+    <section class="products">
+        <h1>Products list: </h1>
+        <ul>
+            <li><strong>Oranges</strong> - £8.50 <button class="btn-buy" data-name="oranges"
+                    data-price="8.50">Buy</button></li>
+            <li><strong>Banana</strong> - £10.40 <button class="btn-buy" data-name="banana"
+                    data-price="10.40">Buy</button></li>
+            <li><strong>Milk</strong> - £2.30 <button class="btn-buy" data-name="milk" data-price="2.30">Buy</button>
+            </li>
+        </ul>
+    </section>
+    <section class="basket">
+        <h1>Basket: </h1>
+        <ul class="basket-list"></ul>
+        <button class="btn-buy-all" disabled>Buy all</button>
+    </section>
 </body>
 
 </html>

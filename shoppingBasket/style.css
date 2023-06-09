@@ -48,3 +48,8 @@ h6 {
 }
 
 /* My Custom CSS Reset END*/
+
+body {
+    font-size: 2rem;
+    margin: 1rem;
+}

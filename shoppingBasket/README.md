@@ -8,3 +8,4 @@ Shopping basket of an online shop with functions:
  5. It is possible to add a product to the list.
  6. After placing the order, a summary will be displayed.
  7. After placing the order, the basket will be cleared.
+ 8. Shopping basket data will be in local storage.
