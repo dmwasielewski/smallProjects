@@ -21,18 +21,34 @@
 
 // // console.log(oranges);
 
-const basket = new Basket();
 const buyBtns = [...document.querySelectorAll('[data-name]')];
 const basketUl = document.querySelector('.basket-list');
 const buyAllBtn = document.querySelector('.btn-buy-all');
+
+const basket = new Basket();
+
+const removeItem = (event) => {
+  // const element = event.target.dataset.name;
+  // console.log('deleting: ', event.target.dataset.id);
+  const id = Number(event.target.dataset.id);
+  basket.remove(id);
+  createBasketUi();
+};
 
 const createBasketUi = () => {
   basketUl.innerText = '';
   const summary = basket.getBasketSummary();
 
-  for (const oneProductInfo of summary) {
+  for (const { id, text } of summary) {
+    // console.log(oneProductInfo);
+    // const { id, text } = oneProductInfo;
+
     const newLi = document.createElement('li');
-    newLi.innerText = oneProductInfo;
+    // newLi.innerText = oneProductInfo.text;
+    newLi.innerText = text;
+    newLi.addEventListener('click', removeItem);
+    // newLi.dataset.id = oneProductInfo.id;
+    newLi.dataset.id = id;
     basketUl.appendChild(newLi);
   }
 
@@ -41,9 +57,9 @@ const createBasketUi = () => {
   if (basketTotalValue > 0) {
     buyAllBtn.removeAttribute('disabled');
   } else {
-    buyAllBtn.setAttribute('disabled');
+    buyAllBtn.setAttribute('disabled', true); //two arguments required
   }
-  // buyAllBtn.disabled = basketTotalValue === 0;
+  // buyAllBtn.disabled = basketTotalValue === 0; //different way
 };
 
 const addProductToBasket = (event) => {
@@ -55,6 +71,13 @@ const addProductToBasket = (event) => {
   basket.add(newProduct);
   //   basket.getBasketSummary();
   //   console.log(basket.getBasketSummary());
+  createBasketUi();
+};
+
+const buyAllProducts = () => {
+  const basketTotalValue = basket.getTotalValue();
+  alert(`Thank you. Total price: £${basketTotalValue.toFixed(2)}`);
+  basket.clear();
   createBasketUi();
 };
 
@@ -73,3 +96,5 @@ for (const btn of buyBtns) {
 // });
 
 // console.log(buyBtns);
+
+buyAllBtn.addEventListener('click', buyAllProducts);

@@ -9,3 +9,4 @@ Shopping basket of an online shop with functions:
  6. After placing the order, a summary will be displayed.
  7. After placing the order, the basket will be cleared.
  8. Shopping basket data will be in local storage.
+ 9.  Alert after buy all with summary cost.
