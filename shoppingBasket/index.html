@@ -9,18 +9,24 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./src/basket.js" defer></script>
     <script src="./src/ui.js" defer></script>
+    <script src="./src/adminUi.js" defer></script>
 
 </head>
 
 <body>
     <section class="products">
         <h1>Products list: </h1>
-        <ul>
-            <li><strong>Oranges</strong> - £8.50 <button class="btn-buy" data-name="oranges"
-                    data-price="8.50">Buy</button></li>
-            <li><strong>Banana</strong> - £10.40 <button class="btn-buy" data-name="banana"
-                    data-price="10.40">Buy</button></li>
-            <li><strong>Milk</strong> - £2.30 <button class="btn-buy" data-name="milk" data-price="2.30">Buy</button>
+        <ul class="products-list">
+            <li>
+                <strong>Oranges</strong> - £8.50 <button class="btn-buy" data-name="oranges"
+                    data-price="8.50">Buy</button>
+            </li>
+            <li>
+                <strong>Banana</strong> - £10.40 <button class="btn-buy" data-name="banana"
+                    data-price="10.40">Buy</button>
+            </li>
+            <li>
+                <strong>Milk</strong> - £2.30 <button class="btn-buy" data-name="milk" data-price="2.30">Buy</button>
             </li>
         </ul>
     </section>
@@ -28,6 +34,14 @@
         <h1>Basket: </h1>
         <ul class="basket-list"></ul>
         <button class="btn-buy-all" disabled>Buy all</button>
+    </section>
+    <section class="admin-add-product">
+        <h1>Admin panel:</h1>
+        <form class="form-add-product" action="">
+            <input type="text" name="product-name" placeholder="Product name..." required>
+            <input type="number" name="product-price" placeholder="Product price..." required>
+            <button type="submit">Add product</button>
+        </form>
     </section>
 </body>
 
