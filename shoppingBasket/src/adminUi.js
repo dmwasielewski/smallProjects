@@ -32,8 +32,6 @@ const addProductToShop = (name, price) => {
   newLi.appendChild(newBtn);
 
   productsUl.appendChild(newLi);
-
-  saveProductsToLocalStorage(name, price);
 };
 
 const handleAddProductFormSubmit = (event) => {
@@ -43,6 +41,20 @@ const handleAddProductFormSubmit = (event) => {
   const priceFromInput = Number(priceInput.value);
 
   addProductToShop(nameFromInput, priceFromInput);
+  saveProductsToLocalStorage(nameFromInput, priceFromInput);
+};
+
+const loadProductsFromLocalStorage = () => {
+  const productsList = JSON.parse(localStorage.getItem('shop-products')) ?? []; //if Null then empty array
+
+  // const { name, price } = product; // destruct
+
+  // addProductToShop(name, product);
+  for (const product of productsList) {
+    addProductToShop(product.name, product.price);
+  }
 };
 
 addProductForm.addEventListener('submit', handleAddProductFormSubmit);
+
+loadProductsFromLocalStorage();
