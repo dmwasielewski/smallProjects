@@ -2,7 +2,7 @@
 
 class Basket {
   constructor() {
-    this.items = [];
+    this.items = this.loadFromLocalStorage();
     this.totalValue = 0;
   }
 
@@ -11,11 +11,13 @@ class Basket {
     // this.items.slice(0);
     // this.items = [];
     // console.log('cleared');
+    this.saveToLocalStorage();
   }
 
   add(item) {
     this.items.push(item);
     // this.addToTotalValue(item.price);
+    this.saveToLocalStorage();
   }
 
   //   addToTotalValue(newPrice) {
@@ -23,6 +25,7 @@ class Basket {
   //   }
   remove(number) {
     this.items.splice(number - 1, 1);
+    this.saveToLocalStorage();
   }
 
   setNewPrice(newPrice) {
@@ -43,6 +46,20 @@ class Basket {
       };
     });
     // .forEach((item) => console.log(item));
+  }
+
+  saveToLocalStorage() {
+    localStorage.setItem('basket-items', JSON.stringify(this.items));
+  }
+
+  loadFromLocalStorage() {
+    const itemsJson = localStorage.getItem('basket-items');
+
+    if (itemsJson === null) {
+      return [];
+    } else {
+      return JSON.parse(itemsJson);
+    }
   }
 }
 

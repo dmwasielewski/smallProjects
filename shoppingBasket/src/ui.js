@@ -98,3 +98,5 @@ for (const btn of buyBtns) {
 // console.log(buyBtns);
 
 buyAllBtn.addEventListener('click', buyAllProducts);
+
+createBasketUi();
