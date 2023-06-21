@@ -1,6 +1,7 @@
 # Shopping Basket
 
-Shopping basket of an online shop with functions:
+This code provides the following functionality :
+
  1. Adding a product from the list to the basket that will include the product name and price.
  2. The contents of the basket will be displayed.
  3. It is possible to remove an item from the basket.
