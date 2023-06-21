@@ -1,6 +1,10 @@
 'use strict';
 
-const optionsArray = ['test1', 'test2', 'test3'];
+const optionsArray = [
+  'Life is constantly evolving, so be open to change.',
+  'Take care of your physical, mental, and emotional well-being.',
+  'Cherish and prioritize meaningful relationships.',
+];
 const input = document.querySelector('input');
 
 const showAdvice = (event) => {
